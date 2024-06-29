@@ -1,0 +1,24 @@
+{
+  "name": "notification-limiter",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/notification-limiter/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "notification-limiter:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "notification-limiter:build:development"
+        },
+        "production": {
+          "buildTarget": "notification-limiter:build:production"
+        }
+      }
+    }
+  }
+}
